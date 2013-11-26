@@ -53,6 +53,6 @@ trap "wallet_backup_cleanup" INT TERM EXIT
     # copy away... 
     # (!) insert any commands to copy the wallet to a safe place
     #
-    #rsync -vaP "${MY_TMPDIR}/${NEW_FILENAME}" someuser@somehost.tld
+    #rsync -vaP "${MY_TMPDIR}/${BACKUP_FILE}" someuser@somehost.tld
     #s3cmd put --acl-private "${MY_TMPDIR}/${BACKUP_FILE}" s3://some-s3-bucket-you-own
 ) 200>"${MY_LOCKFILE}"
